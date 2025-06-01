@@ -7,46 +7,62 @@
     <title>Charity Water Landing Page</title> <!-- The title shown in the browser tab -->
     <!-- This links to the CSS file for styling -->
     <link rel="stylesheet" href="styles.css">
+    <!-- The CSS file now includes responsive design and button/image hover effects -->
 </head>
 <body>
-  <!-- The header is at the top of the page -->
-  <header>
-    <div class="logo">
-      <!-- This shows the Charity Water logo image -->
-      <img src="cw_logo-2.png" alt="Charity Water Logo">
+  <!-- Top navigation bar: logo, menu, and auth buttons all in one row -->
+  <div class="nav-separator-bar">
+    <!-- Flex container for logo, menu, and right buttons -->
+    <div class="nav-bar-flex">
+      <!-- Logo and dropdown headings aligned, evenly spaced, and vertically centered -->
+      <div class="nav-bar-left">
+        <!-- Logo on the far left, same height as menu and vertically centered -->
+        <img src="img/charitywater_logo_horizontal_BlackText.png" alt="Charity Water Logo" class="logo-icon-bar">
+        <!-- Dropdown menu links, aligned with logo -->
+        <nav class="main-nav nav-bar-menu">
+          <a href="#" class="nav-link">
+            TAKE ACTION <span class="dropdown">&#9662;</span>
+          </a>
+          <a href="#" class="nav-link">
+            ABOUT US <span class="dropdown">&#9662;</span>
+          </a>
+          <a href="#" class="nav-link">WHY WATER?</a>
+        </nav>
+      </div>
+      <!-- Right-side auth buttons, pushed far right -->
+      <div class="nav-bar-auth">
+        <a href="#" class="nav-link">SIGN IN</a>
+        <span class="divider">|</span>
+        <a href="#" class="subscribe-btn">SUBSCRIBE</a>
+      </div>
     </div>
-    <!-- This is the navigation menu with links -->
-    <nav>
-      <a href="#">
-        TAKE ACTION
-        <!-- This is a small arrow showing there is a dropdown -->
-        <span class="dropdown">&#9662;</span>
-      </a>
-      <a href="#">
-        ABOUT US
-        <span class="dropdown">&#9662;</span>
-      </a>
-      <a href="#">WHY WATER?</a>
-      <a href="#">SIGN IN</a>
-      <a href="#" class="subscribe">SUBSCRIBE</a>
-    </nav>
-  </header>
+  </div>
 
-  <!-- This is the main section with a big message and button -->
+  <!-- Hero section with background image and overlay -->
   <section class="hero">
-    <!-- This adds a dark overlay on the background image -->
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <!-- This is the main headline -->
-      <h1>From Campus to Global Impact</h1>
-      <!-- This is a short description under the headline -->
-      <p>
-        Turn your activism into lasting clean water projects. See your donations create global change with 100% transparency and impact.
-      </p>
-      <!-- This is a button you can click to take action -->
-      <button class="cta-button">MAKE CHANGE FLOW 💧</button>
+    <!-- The hero section uses a background image set in CSS -->
+    <div class="hero-overlay"></div> <!-- This adds a dark overlay for better text contrast -->
+    <!-- Hero content is right-aligned using inline style and CSS for beginners -->
+    <div class="hero-content hero-content-right" style="text-align: right;">
+      <!-- The style above aligns all text and content inside this box to the right side of the page -->
+      <!-- Right-aligned hero content moved closer to the edge -->
+      <div class="hero-right-align">
+        <!-- Main headline, right-aligned, large serif font -->
+        <h1 class="hero-headline" style="text-align: right;">
+          From Campus to Global Impact
+        </h1>
+        <!-- Subheadline, right-aligned, smaller sans-serif font -->
+        <p style="text-align: right;">
+          Turn your activism into lasting clean water projects. See your donations create global change with 100% transparency and impact.
+        </p>
+        <!-- Call-to-action button, right-aligned -->
+        <div style="text-align: right;">
+          <button class="cta-button">MAKE CHANGE FLOW 💧</button>
+        </div>
+      </div>
     </div>
   </section>
+  <!-- The page is now responsive and buttons/images have smooth hover effects. See styles.css for details. -->
 </body>
 </html>
 
