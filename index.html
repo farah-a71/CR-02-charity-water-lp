@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
+    <!-- The head section gives information about the page -->
+    <meta charset="UTF-8"> <!-- This sets the character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page look good on all devices -->
+    <title>Charity Water Landing Page</title> <!-- The title shown in the browser tab -->
+    <!-- This links to the CSS file for styling -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Add your HTML here -->
+  <!-- The header is at the top of the page -->
+  <header>
+    <div class="logo">
+      <!-- This shows the Charity Water logo image -->
+      <img src="cw_logo-2.png" alt="Charity Water Logo">
+    </div>
+    <!-- This is the navigation menu with links -->
+    <nav>
+      <a href="#">
+        TAKE ACTION
+        <!-- This is a small arrow showing there is a dropdown -->
+        <span class="dropdown">&#9662;</span>
+      </a>
+      <a href="#">
+        ABOUT US
+        <span class="dropdown">&#9662;</span>
+      </a>
+      <a href="#">WHY WATER?</a>
+      <a href="#">SIGN IN</a>
+      <a href="#" class="subscribe">SUBSCRIBE</a>
+    </nav>
+  </header>
+
+  <!-- This is the main section with a big message and button -->
+  <section class="hero">
+    <!-- This adds a dark overlay on the background image -->
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <!-- This is the main headline -->
+      <h1>From Campus to Global Impact</h1>
+      <!-- This is a short description under the headline -->
+      <p>
+        Turn your activism into lasting clean water projects. See your donations create global change with 100% transparency and impact.
+      </p>
+      <!-- This is a button you can click to take action -->
+      <button class="cta-button">MAKE CHANGE FLOW 💧</button>
+    </div>
+  </section>
 </body>
 </html>
+

@@ -17,3 +17,239 @@ Fonts:
 - Avenir
 
 */
+/* Set the background color for the whole page */
+body {
+  margin: 0;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif; /* Use Proxima Nova for most text */
+  background-color: #FFF7E6; /* Light cream tone */
+  color: #333;
+  /* Make sure the page takes up at least the full height of the screen */
+  min-height: 100vh;
+}
+
+/* Header styles */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #FFF7E6;
+  /* Add a subtle bottom border for separation */
+  border-bottom: 1px solid #f0e6d2;
+}
+
+/* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif; /* Use Proxima Nova for logo */
+  font-size: 1.3rem;
+  font-variant: small-caps;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo img {
+  height: 32px; /* Make the logo a bit larger for visibility */
+  vertical-align: middle;
+}
+
+/* Yellow drop icon */
+.drop-icon {
+  display: inline-block;
+  width: 20px;
+  height: 24px;
+  margin-right: 8px;
+  background: #FFD200;
+  border-radius: 50% 50% 60% 60% / 60% 60% 100% 100%;
+  /* This creates a simple drop shape */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+/* Logo text */
+.logo-text {
+  color: #222;
+}
+
+/* Navigation menu styles */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif; /* Use Proxima Nova for nav */
+  font-size: 15px;
+  font-variant: small-caps;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+}
+
+/* Dropdown indicator arrow */
+.dropdown {
+  font-size: 0.8em;
+  margin-left: 4px;
+}
+
+/* Highlight the SUBSCRIBE button */
+nav a.subscribe {
+  background-color: #FFD200;
+  color: #111;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin-left: 12px;
+  font-weight: bold;
+  box-shadow: 0 1px 4px rgba(44,44,44,0.04);
+  border: none;
+}
+
+/* Nav link hover effect */
+nav a:hover {
+  color: #2E9DF7; /* Blue highlight on hover */
+}
+
+/* Subscribe button style */
+nav a.subscribe {
+  background-color: #FFC907; /* Brand yellow */
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: black;
+  margin-left: 10px;
+}
+
+/* Hero section styles */
+.hero {
+  /* Use a background image for the hero section */
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  background-image: url('images/hero.jpg'); /* Use local placeholder image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Add some space at the bottom for mobile */
+  box-sizing: border-box;
+}
+
+/* Dark overlay to improve text contrast */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.45); /* Slight dark overlay */
+  z-index: 1;
+}
+
+/* Content inside the hero section */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 60px 40px;
+  max-width: 700px;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif; /* Use Proxima Nova for hero content except h1 */
+}
+
+/* Hero headline */
+.hero-content h1 {
+  font-family: Georgia, serif; /* Only the headline uses serif */
+  font-size: 48px;
+  color: #FFF7E6; /* Light cream/white color */
+  margin-bottom: 22px;
+  font-weight: normal;
+  line-height: 1.1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+/* Hero subheadline/paragraph */
+.hero-content p {
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif; /* Use Proxima Nova for paragraph */
+  font-size: 20px;
+  color: #fff;
+  max-width: 600px;
+  margin-bottom: 36px;
+  line-height: 1.5;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+/* Call-to-action button */
+.cta-button {
+  background-color: #FFD200; /* Yellow background */
+  color: #111;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif; /* Use Proxima Nova for button */
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 16px 36px; /* Large padding */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(44, 44, 44, 0.10);
+  transition: background 0.2s;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+.cta-button:hover {
+  background-color: #e6bd00;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .hero {
+    padding: 40px 16px;
+    min-height: 80vh;
+  }
+  .hero-content {
+    padding: 40px 16px;
+    max-width: 100%;
+  }
+  .hero-content h1 {
+    font-size: 28px; /* Scale down headline */
+  }
+  .hero-content p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  .cta-button {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 14px 0;
+  }
+  .hero-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  nav {
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  nav a {
+    margin: 4px 6px;
+    font-size: 14px;
+  }
+}
